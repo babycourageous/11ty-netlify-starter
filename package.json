@@ -1,0 +1,8 @@
+{
+  "name": "11ty-netlify-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/babycourageous/11ty-netlify-starter.git",
+  "author": "Rene Dellefont <renedellefont@gmail.com>",
+  "license": "MIT"
+}
