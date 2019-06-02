@@ -5,8 +5,16 @@
   "repository": "https://github.com/babycourageous/11ty-netlify-starter.git",
   "author": "Rene Dellefont <renedellefont@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "yarn run dev",
+    "dev": "yarn run serve:site",
+    "build": "yarn run build:11ty",
+    "serve:site": "eleventy --serve",
+    "build:11ty": "eleventy"
+  },
   "dependencies": {},
   "devDependencies": {
+    "@11ty/eleventy": "^0.8.3",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",

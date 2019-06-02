@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+      <title>{{ title }} | {{site.title}}</title>
+    {% else %}
+      <title>{{site.title}}</title>
+    {% endif %}
+    <meta name="Description" content="{{ renderData.description or description or site.description }}">
+    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+  </head>
+  <body>
+    {%- include "header.njk" -%}
+    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+      <div class="warning">
+        <p>
+          <em>This is an <a href="https://www.11ty.io/">Eleventy starter project</a> influenced by the <a href="https://github.com/11ty/eleventy-base-blog">eleventy-base-blog repo</a>.</em>
+        </p>
+      </div>
+      {{ content | safe }}
+    </main>
+    {%- include "footer.njk" -%}
+    <script src="/javascript/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "title": "SITE_NAME",
+  "url": "SITE_URL",
+  "description": "SITE_DESCRIPTION",
+  "nav": [
+    {
+      "item": "Home",
+      "url": "/"
+    },
+    {
+      "item": "About",
+      "url": "/about"
+    }
+  ]
+}
