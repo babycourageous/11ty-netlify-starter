@@ -9,22 +9,33 @@
     "start": "yarn run dev",
     "dev": "yarn run serve:site",
     "build": "yarn run build:11ty",
+    "build:assets": "npm-run-all --parallel build:assets:*",
+    "build:assets:css": "postcss src/_assets/css/index.css -o _site/css/styles.css",
     "serve:site": "browser-sync '_site' 'http://localhost:9000' --no-notify --no-open",
-    "build:11ty": "eleventy"
+    "build:11ty": "eleventy",
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:css": "chokidar 'src/_assets/css/**/*' 'tailwind.config.js' --command 'run-s build:assets:css browsersync:reload'"
   },
   "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "autoprefixer": "^9.5.1",
     "babel-eslint": "^10.0.1",
     "browser-sync": "^2.26.5",
     "chokidar": "^3.0.0",
     "chokidar-cli": "^1.2.2",
+    "cssnano": "^4.1.10",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-prettier": "^3.1.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.17.1"
+    "postcss-cli": "^6.1.2",
+    "postcss-import": "^12.0.1",
+    "precss": "^4.0.0",
+    "prettier": "^1.17.1",
+    "tailwindcss": "^1.0.3"
   }
 }

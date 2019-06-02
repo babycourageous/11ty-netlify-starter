@@ -11,7 +11,7 @@
     <meta name="Description" content="{{ renderData.description or description or site.description }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
   </head>
-  <body>
+  <body class="bg-blue-500">
     {%- include "header.njk" -%}
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
       <div class="warning">
