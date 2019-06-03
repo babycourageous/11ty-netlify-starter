@@ -22,4 +22,5 @@ const optimiseJPEGImages = () =>
 
 optimiseJPEGImages()
   .then(() => optimisePNGImages())
+  // eslint-disable-next-line no-console
   .catch(error => console.log(error))
