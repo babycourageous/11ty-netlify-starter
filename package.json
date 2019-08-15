@@ -17,7 +17,7 @@
     "build:assets:images": "node imagemin.images.js",
     "build:assets:svg": "svg-sprite --svg-xmldecl=false --svg-doctype=false --symbol --symbol-inline=true --symbol-dest=src/_includes src/_assets/svg/*.svg",
     "serve": "npm-run-all --parallel serve:*",
-    "serve:site": "browser-sync '_site' 'http://localhost:9000' --no-notify --no-open",
+    "serve:site": "browser-sync '_site' --no-notify --no-open",
     "build:11ty": "eleventy",
     "watch": "npm-run-all --parallel watch:*",
     "watch:css": "chokidar 'src/_assets/css/**/*' 'tailwind.config.js' --command 'run-s build:assets:css browsersync:reload'",
