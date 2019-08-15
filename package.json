@@ -15,7 +15,7 @@
     "build:assets:css": "postcss src/_assets/css/index.css -o _site/css/styles.css",
     "build:assets:js": "webpack src/_assets/javascript/index.js -o _site/javascript/main.js",
     "build:assets:images": "node imagemin.images.js",
-    "build:assets:svg": "svg-sprite --svg-xmldecl=false --svg-doctype=false --symbol --symbol-inline=true --symbol-dest=. --dest=_includes src/_assets/svg/*.svg",
+    "build:assets:svg": "svg-sprite --svg-xmldecl=false --svg-doctype=false --symbol --symbol-inline=true --symbol-dest=src/_includes src/_assets/svg/*.svg",
     "serve": "npm-run-all --parallel serve:*",
     "serve:site": "browser-sync '_site' 'http://localhost:9000' --no-notify --no-open",
     "build:11ty": "eleventy",
@@ -50,6 +50,7 @@
     "postcss-import": "^12.0.1",
     "precss": "^4.0.0",
     "prettier": "^1.18.2",
+    "svg-sprite": "^1.5.0",
     "tailwindcss": "^1.1.2",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.6"
