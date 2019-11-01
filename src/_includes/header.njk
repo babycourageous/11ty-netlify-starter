@@ -1,12 +1,14 @@
-<header>
+<header class="flex justify-between items-center w-full px-4 bg-gray-800 text-white">
   <h1>
     <a href="{{ '/' | url }}">{{ site.title }}</a>
   </h1>
-  <ul class="nav">
-    {%- for nav in site.nav -%}
-      <li class="{% if nav.url == page.url %}is-active{% endif %}">
-        <a href="{{ nav.url | url }}">{{ nav.item }}</a>
-      </li>
-    {%- endfor -%}
-  </ul>
+  <nav>
+    <ul class="flex">
+      {%- for nav in site.nav -%}
+        <li class="{% if nav.url == page.url %}is-active{% endif %}">
+          <a class="block pt-5 pb-3 ml-4 border-b border-gray-800 hover:border-blue-200 uppercase" href="{{ nav.url | url }}">{{ nav.item }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </nav>
 </header>

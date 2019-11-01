@@ -12,13 +12,13 @@
     <link rel="stylesheet" type="text/css" href="{{ '/css/styles.css' | url }}">
   </head>
   <body class="bg-blue-500">
+    <!-- include svg sprite -->
+    <span style="display:none;">{% include "svg/sprite.symbol.svg" %}</span>
     {%- include "header.njk" -%}
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-      <div class="warning">
-        <p>
-          <em>This is an <a href="https://www.11ty.io/">Eleventy starter project</a> influenced by the <a href="https://github.com/11ty/eleventy-base-blog">eleventy-base-blog repo</a>.</em>
-        </p>
-      </div>
+    <main class="container mx-auto">
+      <p>
+        <em>This is an <a href="https://www.11ty.io/">Eleventy starter project</a> influenced by the <a href="https://github.com/11ty/eleventy-base-blog">eleventy-base-blog repo</a>.</em>
+      </p>
       {{ content | safe }}
     </main>
     {%- include "footer.njk" -%}
