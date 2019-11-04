@@ -1,14 +1,16 @@
-const { DateTime } = require("luxon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const dateFormat = require('./11ty/filters/date')
 
 module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(pluginRss);
 
-  // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
-  });
+  // Add a friendly date filter to nunjucks.
+  // Defaults to format of LLL d, y unless an alternate is passed as a parameter.
+  // {{ date | dateDisplay('OPTIONAL FORMAT STRING') }}
+  eleventyConfig.addFilter('dateDisplay', dateFormat)
+  eleventyConfig.addFilter('htmlDateString', dateObject => dateFormat(dateObject, 'yyyy-LL-dd'))
+
 
   // Unsorted items (in whatever order they were added)
   eleventyConfig.addCollection("all", function(collection) {
