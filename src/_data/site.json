@@ -1,7 +1,7 @@
 {
-  "title": "SITE_NAME",
-  "url": "SITE_URL",
-  "description": "SITE_DESCRIPTION",
+  "title": "11ty Netlify Starter",
+  "url": "https://11ty-netlify-starter.netlify.com",
+  "description": "Starter kit repository for a web site using the Eleventy static site generator that uses Netlify for deployment and serverless functionality along with NetlifyCMS baked in.",
   "nav": [
     {
       "item": "Home",
