@@ -1,6 +1,7 @@
 @import 'tailwindcss/base';
 
 @import 'tailwindcss/components';
+@import './code-highlight.css';
 @import './post.css';
 
 @import 'tailwindcss/utilities';
