@@ -16,7 +16,7 @@
     "build:assets:images": "node imagemin.images.js",
     "build:assets:svg": "svg-sprite --svg-xmldecl=false --svg-doctype=false --symbol=true --symbol-inline=true --symbol-dest=src/_includes src/_assets/svg/*.svg",
     "build:11ty": "eleventy",
-    "postinstall": "netlify lambda install",
+    "postinstall": "netlify-lambda install",
     "serve": "npm-run-all --parallel watch browsersync",
     "browsersync": "browser-sync \"_site\" --no-notify --no-open",
     "browsersync:reload": "browser-sync reload",
@@ -30,7 +30,8 @@
     "clean": "rm -rf _site && mkdir _site"
   },
   "dependencies": {
-    "date-fns": "^2.6.0"
+    "date-fns": "^2.6.0",
+    "netlify-lambda": "^1.6.3"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0",
