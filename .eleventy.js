@@ -19,6 +19,11 @@ module.exports = function(eleventyConfig) {
     return collection.getAll();
   });
 
+  // Posts collection using glob
+  eleventyConfig.addCollection('posts', function(collection) {
+    return collection.getFilteredByGlob('./src/posts/**')
+  })
+
   return {
     dir: {
       input: 'src',
