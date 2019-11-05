@@ -1,12 +1,12 @@
 # 11ty Netlify Starter
 
-Starter kit repository for a web site using the [Eleventy](https://www.11ty.io/) static site generator that uses [Netlify](https://www.netlify.com/) for deployment, Netlify Dev for serverless functionality ([Netlify Redirects](https://netlify.com/docs/redirects/), [Netlify Functions](https://www.netlify.com/products/functions)), as well as [NetlifyCMS](https://www.netlifycms.org/) baked in.
+Starter kit repository for a web site using the [Eleventy](https://www.11ty.io/) static site generator that uses [Netlify](https://www.netlify.com/) for deployment, Netlify Dev for serverless functionality ([Netlify Redirects](https://netlify.com/docs/redirects/), [Netlify Functions](https://www.netlify.com/products/functions)).
 
 _This is an 11ty starter project to quickly get a site using 11ty and Netlify up and running._
 
 This project scaffold includes the following:
 
-- [Eleventy](https://www.11ty.io) as a static site generator
+- [Eleventy](https://www.11ty.io) static site generator
   - A date format filter for Nunjucks with [Date-fns](https://github.com/date-fns/date-fns)
 - CSS withPostCSS processing
   - PostCSS Import
@@ -132,3 +132,7 @@ An example redirect is included in the `netlify.toml` file via Netlify's Redirec
 ```
 /api/fetch-joke
 ```
+
+## TODO
+
+- Add [NetlifyCMS](https://www.netlifycms.org/) to the project.
