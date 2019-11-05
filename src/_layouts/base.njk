@@ -9,16 +9,15 @@
       <title>{{site.title}}</title>
     {% endif %}
     <meta name="Description" content="{{ renderData.description or description or site.description }}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ '/css/styles.css' | url }}">
   </head>
-  <body class="bg-blue-500">
+  <body class="flex flex-col min-h-screen font-sans bg-gray-800">
     <!-- include svg sprite -->
     <span style="display:none;">{% include "svg/sprite.symbol.svg" %}</span>
     {%- include "header.njk" -%}
-    <main class="container mx-auto">
-      <p>
-        <em>This is an <a href="https://www.11ty.io/">Eleventy starter project</a> influenced by the <a href="https://github.com/11ty/eleventy-base-blog">eleventy-base-blog repo</a>.</em>
-      </p>
+    <main class="container flex flex-col flex-1 mx-auto py-8">
+
       {{ content | safe }}
     </main>
     {%- include "footer.njk" -%}
