@@ -1,9 +1,11 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const dateFormat = require('./11ty/filters/date')
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 
 module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(syntaxHighlight)
 
   // Add a friendly date filter to nunjucks.
   // Defaults to format of LLL d, y unless an alternate is passed as a parameter.
