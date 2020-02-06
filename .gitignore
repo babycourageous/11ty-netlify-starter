@@ -13,3 +13,6 @@ _site
 
 # parcel
 .cache
+
+# Local Netlify folder
+.netlify
