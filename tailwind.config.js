@@ -1,5 +1,23 @@
 const twForms = require('@tailwindcss/custom-forms')
-const owl = require('tailwindcss-owl')
+
+function owl({ addUtilities, config, e }) {
+  const newUtilities = {}
+  const spacing = config('theme.spacing')
+
+  Object.keys(spacing).forEach(key => {
+    const className = `.${e(`o-${key}`)} > * + *`
+    const marginTop = spacing[key]
+
+    // Horizontal spacing too!
+    const classNameHorizontal = `.${e(`oh-${key}`)} > * + *`
+    const marginLeft = spacing[key]
+
+    newUtilities[className] = { marginTop }
+    newUtilities[classNameHorizontal] = { marginLeft }
+  })
+
+  addUtilities(newUtilities, ['responsive'])
+}
 
 module.exports = {
   theme: {

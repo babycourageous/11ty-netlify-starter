@@ -57,7 +57,6 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-terser": "^5.2.0",
     "svg-sprite": "^1.5.0",
-    "tailwindcss": "^1.1.2",
-    "tailwindcss-owl": "^2.0.0"
+    "tailwindcss": "^1.1.2"
   }
 }
