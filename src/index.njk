@@ -23,7 +23,9 @@ layout: base
     <ul class="ml-8 list-disc list-inside">
       <li>PostCSS imports</li>
       <li>Pre CSS</li>
-      <li>Tailwind CSS</li>
+      <li>
+        <a href="https://tailwindcss.com/">Tailwind CSS</a>
+      </li>
       <li>Autoprefixer</li>
       <li>CSS Nano</li>
       <li>Purge CSS</li>
@@ -34,14 +36,16 @@ layout: base
       </svg>
       <span>Tailwind CSS plugins</span></li>
     <ul class="ml-8 list-disc list-inside">
-      <li>Tailwind Custom Forms</li>
-      <li>Tailwind Lobotomized Owl selector</li>
+      <li>
+        <a href="https://tailwindcss-custom-forms.netlify.com/">Tailwind Custom Forms</a>
+      </li>
+      <li>Custom Tailwind Lobotomized Owl selector</li>
     </ul>
     <li class="flex items-center">
       <svg class="flex-no-shrink block fill-current text-purple w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.393 7.5l-5.643 5.784-2.644-2.506-1.856 1.858 4.5 4.364 7.5-7.643-1.857-1.857z"></path>
       </svg>
-      <span>JS bundling with Parcel</span></li>
+      <span>JS bundling with <a href="https://rollupjs.org/">Rollup</a></span></li>
     <li class="flex items-center">
       <svg class="flex-no-shrink block fill-current text-purple w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.393 7.5l-5.643 5.784-2.644-2.506-1.856 1.858 4.5 4.364 7.5-7.643-1.857-1.857z"></path>
@@ -58,7 +62,7 @@ layout: base
 <ul>
   {%- for post in collections.posts -%}
     <li>
-      <a class="underline" href="{{post.url}}">{{post.data.title}}</a>
+      <a href="{{post.url}}">{{post.data.title}}</a>
     </li>
   {%- endfor -%}
 </ul>
