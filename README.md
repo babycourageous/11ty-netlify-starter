@@ -21,7 +21,7 @@ This project starter includes the following:
   - [Netlify Redirects](https://netlify.com/docs/redirects/) in development
   - [Netlify Functions](https://www.netlify.com/products/functions) in development
 
-![11ty Netlify Starter screenshot](./screenshot.jpg)
+![11ty Netlify Starter screenshot](./screenshot.png)
 
 ## Getting Started
 
