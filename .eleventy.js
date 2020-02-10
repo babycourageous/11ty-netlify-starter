@@ -3,6 +3,12 @@ const dateFormat = require('./11ty/filters/date')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.setBrowserSyncConfig({
+    files: [
+      '_site/css/**/*',
+      '_site/javascript/**/*'
+    ]
+  });
 
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight)
@@ -23,6 +29,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection('posts', function(collection) {
     return collection.getFilteredByGlob('./src/posts/**')
   })
+
+  eleventyConfig.addPassthroughCopy({ "src/_assets/images": "assets/images" });
 
   return {
     dir: {
