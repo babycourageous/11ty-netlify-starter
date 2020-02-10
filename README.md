@@ -1,31 +1,31 @@
 # 11ty Netlify Starter
 
-Starter kit repository for a web site using the [Eleventy](https://www.11ty.io/) static site generator that uses [Netlify](https://www.netlify.com/) for deployment, Netlify Dev for serverless functionality ([Netlify Redirects](https://netlify.com/docs/redirects/), [Netlify Functions](https://www.netlify.com/products/functions)).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6ff39233-48f7-4f80-9a82-12b0ef08ec63/deploy-status)](https://app.netlify.com/sites/11ty-netlify-starter/deploys)
 
-_This is an 11ty starter project to quickly get a site using 11ty and Netlify up and running._
+My first stop for kicking off a project using the [Eleventy](https://www.11ty.io/) static site generator.
 
-This project scaffold includes the following:
+This project starter includes the following:
 
-- [Eleventy](https://www.11ty.io) static site generator
+- [Eleventy](https://www.11ty.io)
   - A date format filter for Nunjucks with [Date-fns](https://github.com/date-fns/date-fns)
 - CSS withPostCSS processing
   - PostCSS Import
   - Pre CSS
   - Tailwind CSS
+    - Tailwind Custom Forms
+    - Tailwind Lobotomized Owl selector
   - Autoprefixer
   - CSSNano
-  - Purge CSS
-- Tailwind CSS plugins
-  - Tailwind Custom Forms
-  - Tailwind Lobotomized Owl selector
-- JS bundling with Parcel
+- JS bundling with Rollup
 - [Netlify Dev](https://www.netlify.com/products/dev)
   - [Netlify Redirects](https://netlify.com/docs/redirects/) in development
   - [Netlify Functions](https://www.netlify.com/products/functions) in development
 
+![11ty Netlify Starter screenshot](./screenshot.jpg)
+
 ## Getting Started
 
-Choose one of three ways to get started! Instructions use `yarn` but will work all the same with `npm` as the command of choice (just be sure to update `netlify.toml` if you prefer `npm`).
+Choose one of three ways to get started! Instructions use `yarn` but will work all the same with `npm` if that's your command of choice (just be sure to update `netlify.toml` if you prefer `npm`).
 
 ### One-Click Netlify Deploy
 
@@ -111,7 +111,7 @@ or
 ntl dev
 ```
 
-This will detect the settings in the `netlify.toml` file and run the local development script alongside browswersync on port 300 with all the sugar `netlify dev` provides (like being able to execute any of the serverless functions directly)!
+This will detect the settings in the `netlify.toml` file and run the local development script alongside browswersync on port 3000 with all the sugar `netlify dev` provides (like being able to execute any of the serverless functions directly)!
 
 ### Netlify Functions
 
@@ -130,7 +130,7 @@ In order to include function-specific node modules in the deployment without che
 An example redirect is included in the `netlify.toml` file via Netlify's Redirects API. This provides a more user-friendly URL as a proxy to the default.
 
 ```
-/api/fetch-joke
+/api/dad-joke
 ```
 
 ## TODO
