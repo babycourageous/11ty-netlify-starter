@@ -6,7 +6,6 @@
   "author": "Rene Dellefont <renedellefont@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "yarn run dev",
     "dev": "NODE_ENV=development npm-run-all --serial build:assets --parallel serve watch:*",
     "serve": "ELEVENTY_ENV=development npx @11ty/eleventy --serve",
     "watch": "npm-run-all --parallel watch:*",
